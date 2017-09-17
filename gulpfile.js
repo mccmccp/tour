@@ -29,6 +29,13 @@ gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/owl.carousel/dist/owl.carousel.js',
+		'app/libs/jquery-ui/jquery-ui.js',
+		'app/libs/jquery-ui/ui/i18n/datepicker-ru.js',
+		'app/libs/jquery-range-calendar/js/jquery.rangecalendar.js',
+		'app/libs/jquery-range-calendar/js/jquery-ui.min.js',
+		//'app/libs/jquery-range-calendar/js/moment+langs.min',
+		'app/libs/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js',
+		'app/libs/moment/min/moment-with-locales.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
