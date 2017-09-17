@@ -126,4 +126,9 @@ $(function() {
         $("html, body").animate({ scrollTop: $(window).height() - 70}, 600);
         return false;
     });
+    var $quickSearchMap = $('.quick-search-map');
+    $quickSearchMap.click(function() {
+        console.log(222)
+        $quickSearchMap.addClass('open')
+    })
 });

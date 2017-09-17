@@ -595,6 +595,28 @@ a
 		text-align: center
 		padding-bottom: 40px
 
+.quick-search-result
+	.calendar
+		padding-bottom: 30px
+	.quick-search-block
+		padding: 0 0 15px
+	&.map-container
+		height: 100px
+		overflow: hidden
+	#map
+		height: 100vh
+	.main-search, .search-top, .search-btn
+		display: none
+	&.open
+		.main-search, .search-top, .search-btn
+			display: block
+		&.map-container
+			height: 100%
+			overflow: visible
+		#map
+			height: 100vh
+
+
 
 
 

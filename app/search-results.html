@@ -79,7 +79,7 @@
         </div>
     </div>
 </header>
-<div class="map-container">
+<div class="map-container quick-search-result quick-search-map">
     <div class="search-top">
         <input type="text" placeholder="Поиск тура по ID">
     </div>
@@ -96,59 +96,47 @@
     <div class="search-btn center">
         <input value="поиск" type="submit">
     </div>
-    <div class="extended-search">
-        <div class="text">Расширенный поиск</div>
-        <div class="btn">
-            <div class="circle circle-click">
-                <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div>
     <div id="map"></div>
 </div>
-<div class="main-container-wrapper">
+<div class="main-container-wrapper quick-search-result">
     <div class="container main-container">
         <div class="row">
-            <div class="col-md-12">
-                <section class="search-form">
-                    <form action="">
-                        <div class="container">
-                            <div class="row row-bottom">
-                                <div class="col-md-12">
-                                    <div id="range-calendar"></div>
-                                </div>
+                <section class="">
+                    <div class="container">
+                        <div class="row row-bottom calendar">
+                            <div class="col-md-12">
+                                <div id="range-calendar"></div>
                             </div>
-                            <div class="row row-bottom">
-                                <div class="col-md-12">
-                                    <div class="">
-                                        <div class="places-container input-container">
-                                            <i class="fa fa-plane"></i>
-                                            <input class="input-field " type="text" placeholder="Откуда">
-                                        </div>
-                                        <div class="places-container input-container">
-                                            <i class="fa fa-plane"></i>
-                                            <input class="input-field where-country" type="text" placeholder="Куда">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="search-form">
+                                    <div class="quick-search-block">
+                                        <div class="options-container">
+                                            <label class="search-label">Стоимость</label>
+                                            <div class="currency">
+                                                <input type="radio" name="currency" id="currency0" checked="checked">
+                                                <label class="currency-radio check-currency" for="currency0">uah</label>
+                                                <input type="radio" name="currency" id="currency1">
+                                                <label class="currency-radio" for="currency1">usd</label>
+                                                <input type="radio" name="currency" id="currency2">
+                                                <label class="currency-radio" for="currency2">eur</label>
+                                            </div>
+                                            <div>
+                                                <div class="input-container places-container">
+                                                    <span class="prepend">от</span>
+                                                    <input class="input-field" type="text" id="minprice" name="minprice"
+                                                           maxlength="7" placeholder="1">
+                                                </div>
+                                                <div class="input-container places-container">
+                                                    <span class="prepend">до</span>
+                                                    <input class="input-field" type="text" id="maxprice" name="maxprice"
+                                                           maxlength="7" placeholder="1000000">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!--<div class="col-md-5">-->
-                                <!--<div class="">-->
-                                <!--<div class="places-container input-container">-->
-                                <!--<i class="fa fa-calendar" aria-hidden="true"></i>-->
-                                <!--<span class="prepend  prepend-first">с</span>-->
-                                <!--<input class="input-field date-field datepicker" data-provide="datepicker">-->
-                                <!--</div>-->
-                                <!--<div class="places-container input-container">-->
-                                <!--<i class="fa fa-calendar" aria-hidden="true"></i>-->
-                                <!--<span class="prepend  prepend-first">по</span>-->
-                                <!--<input class="input-field date-field datepicker" data-provide="datepicker">-->
-                                <!--</div>-->
-                                <!--</div>-->
-                                <!--</div>-->
-                            </div>
-                            <div class="row row-bottom">
-                                <div class="col-md-4">
-                                    <div class="">
+                                    <div class="quick-search-block">
                                         <label class="search-label">Количество ночей</label>
                                         <div class="font-container">
                                             <div class="input-container">
@@ -289,9 +277,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div>
+                                    <div class="quick-search-block">
                                         <div class="input-container adults">
                                             <label class="search-label">Взрослые</label>
                                             <div class="category-container">
@@ -334,38 +320,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="">
-                                        <div class="options-container">
-                                            <label class="search-label">Стоимость</label>
-                                            <div class="currency">
-                                                <input type="radio" name="currency" id="currency0" checked="checked">
-                                                <label class="currency-radio check-currency" for="currency0">uah</label>
-                                                <input type="radio" name="currency" id="currency1">
-                                                <label class="currency-radio" for="currency1">usd</label>
-                                                <input type="radio" name="currency" id="currency2">
-                                                <label class="currency-radio" for="currency2">eur</label>
-                                            </div>
-                                            <div>
-                                                <div class="input-container places-container">
-                                                    <span class="prepend">от</span>
-                                                    <input class="input-field" type="text" id="minprice" name="minprice"
-                                                           maxlength="7" placeholder="1">
-                                                </div>
-                                                <div class="input-container places-container">
-                                                    <span class="prepend">до</span>
-                                                    <input class="input-field" type="text" id="maxprice" name="maxprice"
-                                                           maxlength="7" placeholder="1000000">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row row-bottom">
-                                <div class="col-md-5">
-                                    <div class="options-container">
+                                    <div class="options-container quick-search-block">
                                         <label class="search-label">Категория</label>
                                         <input class="category-any" type="checkbox" name="category-any"
                                                id="category-any">
@@ -397,20 +352,7 @@
                                             <label for="category-8">APART</label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="options-container">
-                                        <label class="search-label">Тип тура</label>
-                                        <div class="category-container">
-                                            <input class="check-category" type="checkbox" name="category" value="1"
-                                                   id="category-9">
-                                            <label for="category-9">A</label>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="options-container right-block">
+                                    <div class="options-container right-block quick-search-block">
                                         <label class="search-label">Тип питания</label>
                                         <input class="category-any" type="checkbox" name="food-any" id="food-any">
                                         <label class="label-any" for="food-any">Любой</label>
@@ -438,46 +380,15 @@
                                             <label for="food-7">PR</label>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row row-bottom">
-                                <div class="col-md-4">
-                                    <div class="">
-                                        <label class="search-label">Курорт</label>
-                                        <input class="select-all" type="checkbox" name="category-any" id="label1">
-                                        <label class="label-all" for="label1">выбрать все</label>
-                                        <div class="multiple-container">
-                                            <div class="">
-                                                <input class="input-multiple" name="searchtext"
-                                                       class="b2b__resort-filter-input" type="text"
-                                                       placeholder="Название курорта">
-                                            </div>
-                                            <ul class="multiple-list scroll-style">
-
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="label2">
-                                                    <label class="" for="label2">Аланья</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="label3">
-                                                    <label class="" for="label3">Анталия</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="label4">
-                                                    <label class="" for="label4">Бираби</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="label5">
-                                                    <label class="" for="label5">Джан</label>
-                                                </li>
-                                            </ul>
+                                    <div class="options-container quick-search-block">
+                                        <label class="search-label">Тип тура</label>
+                                        <div class="category-container">
+                                            <input class="check-category" type="checkbox" name="category" value="1"
+                                                   id="category-9">
+                                            <label for="category-9">A</label>
                                         </div>
                                     </div>
-                                    <div class="">
+                                    <div class="quick-search-block">
                                         <label class="search-label">Курорт</label>
                                         <input class="select-all" type="checkbox" name="category-any" id="label99">
                                         <label class="label-all" for="label99">выбрать все</label>
@@ -513,321 +424,99 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4"></div>
-                                <div class="col-md-4"></div>
                             </div>
-                            <div class="row row-bottom">
-                                <div class="col-md-12">
-                                    <div class="search-btn">
-                                        <input value="поиск" type="submit">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </section>
-                <section class="search-result">
-                    <div class="container">
-                        <div class="row">
                             <div class="col-md-9">
-                                <div class="outer-result">
-                                    <div class="container-fluid result-wrapper scroll-style">
-                                        <div class="row result-row">
-                                            <div class="discount">
-                                                -15%
-                                            </div>
-                                            <div class="col-md-2">
-                                                <img class="hotel-img" src="img/hotels/aurora.png" alt="">
-                                            </div>
-                                            <div class="col-md-7">
-                                                <h3 class="hotel-title">Aurora hotel</h3>
-                                                <div class="city">Курорт: Мармарис</div>
-                                                <div>Ночей: 7</div>
-                                                <div>Питание: Al</div>
-                                                <div>2 взрослых</div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="operator-logo">
-                                                    <img src="img/operators/coral.png" alt="">
-                                                </div>
-                                                <div class="price">
-                                                    25625 грн.
-                                                </div>
-                                                <a href="" class="details">Подробнее</a>
-                                            </div>
-                                        </div>
-                                        <div class="row result-row">
-                                            <div class="discount">
-                                                -15%
-                                            </div>
-                                            <div class="col-md-2">
-                                                <img class="hotel-img" src="img/hotels/aurora.png" alt="">
-                                            </div>
-                                            <div class="col-md-7">
-                                                <h3 class="hotel-title">Aurora hotel</h3>
-                                                <div class="city">Курорт: Мармарис</div>
-                                                <div>Ночей: 7</div>
-                                                <div>Питание: Al</div>
-                                                <div>2 взрослых</div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="operator-logo">
-                                                    <img src="img/operators/coral.png" alt="">
-                                                </div>
-                                                <div class="price">
-                                                    25625 грн.
-                                                </div>
-                                                <a href="" class="details">Подробнее</a>
-                                            </div>
-                                        </div>
-                                        <div class="row result-row">
-                                            <div class="discount">
-                                                -15%
-                                            </div>
-                                            <div class="col-md-2">
-                                                <img class="hotel-img" src="img/hotels/aurora.png" alt="">
-                                            </div>
-                                            <div class="col-md-7">
-                                                <h3 class="hotel-title">Aurora hotel</h3>
-                                                <div class="city">Курорт: Мармарис</div>
-                                                <div>Ночей: 7</div>
-                                                <div>Питание: Al</div>
-                                                <div>2 взрослых</div>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <div class="operator-logo">
-                                                    <img src="img/operators/coral.png" alt="">
-                                                </div>
-                                                <div class="price">
-                                                    25625 грн.
-                                                </div>
-                                                <a href="" class="details">Подробнее</a>
-                                            </div>
-                                        </div>
+                                <div class="search-form">
+                                    <div class="places-container input-container">
+                                        <i class="fa fa-plane"></i>
+                                        <input class="input-field " type="text" placeholder="Откуда">
+                                    </div>
+                                    <div class="places-container input-container">
+                                        <i class="fa fa-plane"></i>
+                                        <input class="input-field where-country" type="text" placeholder="Куда">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="outer-result operators-container">
-                                    <div class="div">
-                                        <div class="operators-top">
-                                            <div class="search-label">Операторы</div>
-                                            <span class="discount-day">скидка дня</span>
-                                        </div>
-                                    </div>
-                                    <div class="result-wrapper scroll-style">
-                                        <div class="multiple-container">
-                                            <ul class="multiple-list scroll-style">
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe92">
-                                                    <label class="" for="labe92">Аланья</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe93">
-                                                    <label class="" for="labe93">Анталия</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe94">
-                                                    <label class="" for="labe94">Бираби</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe95">
-                                                    <label class="" for="labe95">Джан</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe92">
-                                                    <label class="" for="labe92">Аланья</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe93">
-                                                    <label class="" for="labe93">Анталия</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe94">
-                                                    <label class="" for="labe94">Бираби</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe95">
-                                                    <label class="" for="labe95">Джан</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe92">
-                                                    <label class="" for="labe92">Аланья</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe93">
-                                                    <label class="" for="labe93">Анталия</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe94">
-                                                    <label class="" for="labe94">Бираби</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe95">
-                                                    <label class="" for="labe95">Джан</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe92">
-                                                    <label class="" for="labe92">Аланья</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe93">
-                                                    <label class="" for="labe93">Анталия</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe94">
-                                                    <label class="" for="labe94">Бираби</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe95">
-                                                    <label class="" for="labe95">Джан</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe92">
-                                                    <label class="" for="labe92">Аланья</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe93">
-                                                    <label class="" for="labe93">Анталия</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe94">
-                                                    <label class="" for="labe94">Бираби</label>
-                                                </li>
-                                                <li class="checkbox-square">
-                                                    <input class="check-item" type="checkbox" name="category-any"
-                                                           id="labe95">
-                                                    <label class="" for="labe95">Джан</label>
-                                                </li>
-
-                                            </ul>
+                                <div class="search-result">
+                                    <div class="outer-result">
+                                        <div class="container-fluid result-wrapper scroll-style">
+                                            <div class="row result-row">
+                                                <div class="discount">
+                                                    -15%
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <img class="hotel-img" src="img/hotels/aurora.png" alt="">
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <h3 class="hotel-title">Aurora hotel</h3>
+                                                    <div class="city">Курорт: Мармарис</div>
+                                                    <div>Ночей: 7</div>
+                                                    <div>Питание: Al</div>
+                                                    <div>2 взрослых</div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="operator-logo">
+                                                        <img src="img/operators/coral.png" alt="">
+                                                    </div>
+                                                    <div class="price">
+                                                        25625 грн.
+                                                    </div>
+                                                    <a href="" class="details">Подробнее</a>
+                                                </div>
+                                            </div>
+                                            <div class="row result-row">
+                                                <div class="discount">
+                                                    -15%
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <img class="hotel-img" src="img/hotels/aurora.png" alt="">
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <h3 class="hotel-title">Aurora hotel</h3>
+                                                    <div class="city">Курорт: Мармарис</div>
+                                                    <div>Ночей: 7</div>
+                                                    <div>Питание: Al</div>
+                                                    <div>2 взрослых</div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="operator-logo">
+                                                        <img src="img/operators/coral.png" alt="">
+                                                    </div>
+                                                    <div class="price">
+                                                        25625 грн.
+                                                    </div>
+                                                    <a href="" class="details">Подробнее</a>
+                                                </div>
+                                            </div>
+                                            <div class="row result-row">
+                                                <div class="discount">
+                                                    -15%
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <img class="hotel-img" src="img/hotels/aurora.png" alt="">
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <h3 class="hotel-title">Aurora hotel</h3>
+                                                    <div class="city">Курорт: Мармарис</div>
+                                                    <div>Ночей: 7</div>
+                                                    <div>Питание: Al</div>
+                                                    <div>2 взрослых</div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="operator-logo">
+                                                        <img src="img/operators/coral.png" alt="">
+                                                    </div>
+                                                    <div class="price">
+                                                        25625 грн.
+                                                    </div>
+                                                    <a href="" class="details">Подробнее</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="prices">
-                    <div class="container">
-                        <div class="row">
-                            <h2 class="block-title">Минимальные цены на популярные направления</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th class="border-table" rowspan="2">Страна</th>
-                                            <th class="border-table" colspan="3">
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                            </th>
-                                            <th class="border-table" colspan="3">
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                            </th>
-                                            <th colspan="3">
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                                <i class="fa fa-star" aria-hidden="true"></i>
-                                            </th>
-                                        </tr>
-                                        <tr>
-                                            <th>BB</th>
-                                            <th>HB</th>
-                                            <th class="border-table">Al</th>
-                                            <th>BB</th>
-                                            <th>HB</th>
-                                            <th class="border-table">Al</th>
-                                            <th>BB</th>
-                                            <th>HB</th>
-                                            <th>Al</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Турция</td>
-                                            <td>100</td>
-                                            <td>200</td>
-                                            <td>300</td>
-                                            <td>400</td>
-                                            <td>500</td>
-                                            <td>600</td>
-                                            <td>700</td>
-                                            <td>800</td>
-                                            <td>900</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Египет</td>
-                                            <td>100</td>
-                                            <td>200</td>
-                                            <td>300</td>
-                                            <td>400</td>
-                                            <td>500</td>
-                                            <td>600</td>
-                                            <td>700</td>
-                                            <td>800</td>
-                                            <td>900</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Тайланд</td>
-                                            <td>100</td>
-                                            <td>200</td>
-                                            <td>300</td>
-                                            <td>400</td>
-                                            <td>500</td>
-                                            <td>600</td>
-                                            <td>700</td>
-                                            <td>800</td>
-                                            <td>900</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Тунис</td>
-                                            <td>100</td>
-                                            <td>200</td>
-                                            <td>300</td>
-                                            <td>400</td>
-                                            <td>500</td>
-                                            <td>600</td>
-                                            <td>700</td>
-                                            <td>800</td>
-                                            <td>900</td>
-                                        </tr>
-                                    <tbody>
-                                </table>
-                                <div class="table-info">
-                                    Цены туров актуальны на 24 августа 2017
-                                </div>
-                                <div class="table-all">Все направления <i class="fa fa-angle-right" aria-hidden="true"></i></div>
-                            </div>
-                        </div>
-                    </div>
-
                 </section>
                 <section class="countries">
                     <div class="container">
@@ -848,99 +537,6 @@
                                 <div class="country-container">
                                     <div class="country-block" style="background: url(img/egypt.jpg)"></div>
                                     <div class="country-text">Египет</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="about">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="text-container">
-                                    <h2 class="block-title">О проекте</h2>
-                                    <p class="about-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa expedita
-                                        mollitia obcaecati quod saepe. A aspernatur atque commodi consequatur
-                                        consequuntur cum ducimus eaque, incidunt provident voluptas. Aliquid ducimus
-                                        ipsum porro.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa expedita
-                                        mollitia obcaecati quod saepe. A aspernatur atque commodi consequatur
-                                        consequuntur cum ducimus eaque, incidunt provident voluptas. Aliquid ducimus
-                                        ipsum porro.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa expedita
-                                        mollitia obcaecati quod saepe. A aspernatur atque commodi consequatur
-                                        consequuntur cum ducimus eaque, incidunt provident voluptas. Aliquid ducimus
-                                        ipsum porro.
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa expedita
-                                        mollitia obcaecati quod saepe. A aspernatur atque commodi consequatur
-                                        consequuntur cum ducimus eaque, incidunt provident voluptas. Aliquid ducimus
-                                        ipsum porro.
-                                    </p>
-                                </div>
-                                <div class="about-image-container">
-                                    <img src="img/scheme.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="advantages">
-                    <div class="container">
-                        <div class="row">
-                            <h2 class="block-title">Преимущества TravelTour.net</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="data-container">
-                                    <div class="icon-container">
-                                        <div class="image-container">
-                                            <img src="img/advantages/adv4.png">
-                                        </div>
-                                        <h3>Точный поиск</h3>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet aspernatur
-                                        corporis delectus eius harum hic illum ipsam itaque laboriosam officia optio
-                                        pariatur porro, provident reiciendis rem unde, ut veritatis?</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="data-container">
-                                    <div class="icon-container">
-                                        <div class="image-container">
-                                            <img src="img/advantages/adv3.png">
-                                        </div>
-                                        <h3>Подбор туров</h3>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet aspernatur
-                                        corporis delectus eius harum hic illum ipsam itaque laboriosam officia optio
-                                        pariatur porro, provident reiciendis rem unde, ut veritatis?</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="data-container">
-                                    <div class="icon-container">
-                                        <div class="image-container">
-                                            <img src="img/advantages/adv2.png">
-                                        </div>
-                                        <h3>Быстрая покупка</h3>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet aspernatur
-                                        corporis delectus eius harum hic illum ipsam itaque laboriosam officia optio
-                                        pariatur porro, provident reiciendis rem unde, ut veritatis?</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="data-container">
-                                    <div class="icon-container">
-                                        <div class="image-container">
-                                            <img src="img/advantages/adv1.png">
-                                        </div>
-                                        <h3>Помощь online</h3>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet aspernatur
-                                        corporis delectus eius harum hic illum ipsam itaque laboriosam officia optio
-                                        pariatur porro, provident reiciendis rem unde, ut veritatis?</p>
                                 </div>
                             </div>
                         </div>
